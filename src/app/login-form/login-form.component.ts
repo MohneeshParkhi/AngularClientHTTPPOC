@@ -17,5 +17,8 @@ export class LoginFormComponent implements OnInit {
     console.log(this.modelLogin.username);
     console.log(this.modelLogin.password);
   }
+  exportData(){
+    
+  }
 
 }
