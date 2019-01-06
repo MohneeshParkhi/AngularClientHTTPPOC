@@ -8,14 +8,19 @@ import { Login } from '../modals/login';
 })
 export class LoginFormComponent implements OnInit {
   modelLogin: Login;
+  message ="Please Enter the value";
+  check;
   constructor() { }
 
   ngOnInit() {
   }
   onSubmit(value) {
-    console.log(value);
-    console.log(this.modelLogin.username);
-    console.log(this.modelLogin.password);
+    if(value["username"] == "" || value["password"] == ""){
+       this.check=true;
+    }else{
+      this.check = false;
+      console.log(value);
+    }
   }
   exportData(){
     
